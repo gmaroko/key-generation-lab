@@ -102,8 +102,10 @@ public class KeyGeneration {
         // Step 2: calculate Euler’s Totient function
         int n = p * q;
         int phi = eulerTotient(n);
+        int phiOptimized = optimizedEulerTotient(p, q);
 
         System.out.println("n = p * q = " + n);
         System.out.println("Euler’s Totient t(n): " + phi);
+        System.out.println("Euler’s Totient t(n) (Optimized): " + phiOptimized);
     }
 }
