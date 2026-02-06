@@ -73,6 +73,16 @@ public class KeyGeneration {
         return count;
     }
 
+    /**
+     * Optimized method for Euler’s Totient when n = p * q and p, q are prime
+     * @param p: first random prime number computed
+     * @param q: second random prime number computed
+     * @return
+     */
+    public static int optimizedEulerTotient(int p, int q) {
+        return (p - 1) * (q - 1);
+    }
+
     public static void main(String[] args) {
         // step 1: Generate two random primes
         System.out.println("Enter the prime number range: ");
